@@ -5,6 +5,11 @@
  */
 package Capa_Vista;
 
+
+import Capa_Modelo.IngresarDB;
+
+
+
 /**
  *
  * @author Karla Muñoz
@@ -87,6 +92,11 @@ public class Vista_AgregarP extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButton2.setText("Atras");
@@ -210,6 +220,23 @@ public class Vista_AgregarP extends javax.swing.JFrame {
         
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        try {
+            
+            IngresarDB nuevo = new IngresarDB();
+            nuevo.paciente(jTextField1.getText(),jTextField2.getText(), jTextField3.getText(),jTextField4.getText(),jTextField5.getText(),
+                           jTextField1.getText(),jTextField6.getText(), Integer.parseInt(jTextField8.getText()),Integer.parseInt(jTextField8.getText()),
+                           jTextField9.getText(),jTextField10.getText());
+            
+            
+            
+            
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

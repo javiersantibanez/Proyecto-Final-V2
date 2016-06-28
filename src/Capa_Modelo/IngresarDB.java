@@ -33,12 +33,12 @@ public class IngresarDB {
 
           con = ConexionDB.GetConnection();
           sentencia =con.createStatement();
-          sentencia.executeUpdate("  INSERT INTO Paciente " +"VALUES('"+_rut1 +"','"+p_nombre+"',"+
+          sentencia.executeUpdate("INSERT INTO Paciente VALUES('"+_rut +"','"+p_nombre+"',"+
                                "'"+s_nombre+"',"+"'"+p_apellido+"',"+
                                "'"+s_apellido+"',"+"'"+_rut+"',"+"'"+_fechaNacimiento+"',"+"'"+_telefono+"',"+
                                "'"+_direccion+"',"+ "'"+_correo+"'"+_Diagnostico+"')");
 
-
+          
 
            JOptionPane.showMessageDialog(null,"El Paciente  " + p_nombre+ ""+ s_apellido+"   ha sido Ingresado Exitosamente ");                 
 

@@ -5,6 +5,8 @@
  */
 package Capa_Vista;
 
+import java.awt.event.ActionListener;
+
 
 
 
@@ -21,6 +23,77 @@ public class Vista_AgregarP extends javax.swing.JFrame {
         initComponents();
     }
 
+    public void limpiarTextField(){
+        jLabel1.setText("");
+        jLabel2.setText("");
+        jLabel3.setText("");
+        jLabel4.setText("");
+        jLabel5.setText("");
+        jLabel6.setText("");
+        jLabel7.setText("");
+        jLabel8.setText("");
+        jLabel11.setText("");
+        jLabel13.setText("");
+        jLabel14.setText("");
+        jLabel15.setText("");        
+    }
+    
+    public int getRut(){
+        return Integer.parseInt(jTextField1.getText());
+    }
+    public String getPrimerNombre(){
+        return jTextField2.getText();
+    }
+    public String getApellidoPaterno(){
+        return jTextField4.getText();
+    }
+    public String getFNacimiento(){
+        return jTextField6.getText();
+    }
+    public String getCalle(){
+        return jTextField7.getText();
+    }
+    public int getDepto(){
+        return Integer.parseInt(jTextField9.getText());
+    }
+    public String getComuna(){
+        return jTextField13.getText();
+    }
+    public String getRegion(){
+        return jTextField15.getText();
+    }
+    public String getDiagnostico(){
+        return jTextField17.getText();
+    }
+    public String getSegundoNombre(){
+        return jTextField3.getText();
+    }
+    public String getApellidoMaterno(){
+        return jTextField5.getText();
+    }
+    public int getTelefono(){
+        return Integer.parseInt(jTextField8.getText());
+    }
+    public int getNumero(){
+        return Integer.parseInt(jTextField11.getText());
+    }
+    public int getTorre(){
+        return Integer.parseInt(jTextField12.getText());
+    }
+    public String getCiudad(){
+        return jTextField14.getText();
+    }
+    public String getCorreoElectronico(){
+        return jTextField16.getText();
+    }
+    public void botonAtras(ActionListener escuchar){
+         
+        jButton2.addActionListener(escuchar);
+    }
+    public void botonAceptar(ActionListener escuchar){
+         
+        jButton1.addActionListener(escuchar);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -282,8 +355,6 @@ public class Vista_AgregarP extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        
-        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

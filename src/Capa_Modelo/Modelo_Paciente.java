@@ -38,7 +38,7 @@ public class Modelo_Paciente {
             String Diagnostico){
 
         Statement sentencia;
-          int id=1;
+          int id=2;
           try{
 
           con = ConexionDB.GetConnection();

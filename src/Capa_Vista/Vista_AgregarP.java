@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 
 /**
  *
- * @author Karla Muñoz
+ * @author Javier Santibañez
  */
 public class Vista_AgregarP extends javax.swing.JFrame {
 
@@ -24,18 +24,22 @@ public class Vista_AgregarP extends javax.swing.JFrame {
     }
 
     public void limpiarTextField(){
-        jLabel1.setText("");
-        jLabel2.setText("");
-        jLabel3.setText("");
-        jLabel4.setText("");
-        jLabel5.setText("");
-        jLabel6.setText("");
-        jLabel7.setText("");
-        jLabel8.setText("");
-        jLabel11.setText("");
-        jLabel13.setText("");
-        jLabel14.setText("");
-        jLabel15.setText("");        
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jTextField5.setText("");
+        jTextField6.setText("");
+        jTextField7.setText("");
+        jTextField8.setText("");
+        jTextField9.setText("");
+        jTextField11.setText("");
+        jTextField12.setText("");
+        jTextField13.setText("");
+        jTextField14.setText("");
+        jTextField15.setText("");
+        jTextField16.setText("");
+        
     }
     
     public int getRut(){

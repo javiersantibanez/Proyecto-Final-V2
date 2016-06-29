@@ -29,9 +29,6 @@ public class ConexionDB {
             conexion= DriverManager.getConnection(ruta,"sa","1234");
             conexion.createStatement();
            
-            if (conexion!=null){
-                JOptionPane.showMessageDialog(null, "Conexion Exitosa con la base de datos");
-            }
         }
         catch(ClassNotFoundException ex)
         {

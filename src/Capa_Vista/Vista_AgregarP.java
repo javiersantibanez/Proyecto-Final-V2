@@ -6,8 +6,6 @@
 package Capa_Vista;
 
 
-import Capa_Modelo.IngresarDB;
-
 
 
 /**
@@ -291,15 +289,31 @@ public class Vista_AgregarP extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        try {
+      /*  try {
             
             IngresarDB nuevo = new IngresarDB();
            
+            nuevo.paciente(jTextField1.getText(),
+                    jTextField2.getText(),
+                    jTextField3.getText(),
+                    jTextField4.getText(),
+                    jTextField5.getText(),
+                    jTextField6.getText(),
+                    Integer.parseInt(jTextField8.getText()),
+                    jTextField7.getText(), 
+                    Integer.parseInt(jTextField11.getText()), 
+                    Integer.parseInt(jTextField9.getText()),
+                    Integer.parseInt(jTextField12.getText()), 
+                    jTextField13.getText(),
+                    jTextField14.getText(),
+                    jTextField15.getText(),
+                    jTextField16.getText(),
+                    jTextField17.getText());
             
             
             
         } catch (Exception e) {
-        }
+        }*/
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

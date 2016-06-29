@@ -9,8 +9,7 @@ package Capa_Controlador;
  *
  * @author Javier Santibañez
  */
-public class Controlador_Principal {
-    
+public class Controlador_Paciente {
     
     
     

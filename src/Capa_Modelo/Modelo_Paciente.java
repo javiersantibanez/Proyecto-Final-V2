@@ -7,6 +7,7 @@ package Capa_Modelo;
 
 import java.sql.Connection;
 import java.sql.Date;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -38,8 +39,8 @@ public class Modelo_Paciente {
 
    
     
-    public  Connection con ;
-    public  ResultSet resultado;
+    public  Connection con,conx ;
+    public  ResultSet resultado,res;
     
 
     public Modelo_Paciente(){ 
@@ -50,7 +51,7 @@ public class Modelo_Paciente {
 
 
     
-    public void paciente(String calle, int numero, int depto, 
+    public void Ingresarpaciente(String calle, int numero, int depto, 
             int torre, String comuna, String ciudad, 
             String region, int rut, String Pnombre, 
             String Snombre, String apellidoP, String apellidoM, 
@@ -80,6 +81,36 @@ public class Modelo_Paciente {
         
   }
 
-}
+    
+    public void ConsultaPaciente(int rut){
+        Statement sentencia2;
+         
+        try
+            {
+                conx=DriverManager.getConnection("jdbc:sqlserver://DESKTOP-2HVLK3K\\JAVIERPC;databaseName=Proyecto;user=sa;password=1234;");
+                sentencia2=conx.createStatement();
+                res=sentencia2.executeQuery("SELECT Rut_Paciente FROM Paciente WHERE Rut_Paciente = '"+rut+"'");
+                
+                /*while (res.next()) {
+                    Cliente cli = new Cliente();
+                    cli.setId_cliente(rs.getInt("ID_CLIENTE"));
+                    cli.setNombre(rs.getString("NOMBRE"));
+                    cli.setDomicilio(rs.getString("DOMICILIO"));
+                    cli.setTelefono(rs.getString("TELEFONO"));
+                    cli.setCodpost(rs.getString("CODPOST"));
+                    lis_cli.add(cli);
+                }*/
+                }
+        
+            
+            catch(SQLException e){
+                JOptionPane.showMessageDialog(null,e);}
+                
+       
+            }
+        
+    }
+    
+
 
 

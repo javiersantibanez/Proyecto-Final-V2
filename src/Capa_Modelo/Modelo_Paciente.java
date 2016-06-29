@@ -24,16 +24,24 @@ public class Modelo_Paciente {
     String apellidoM;
     String rut;
     int telefono;
-    String direccion;
+    String calle;
+    int numero;
+    int depto;
+    int torre;
+    String comuna;
+    String ciudad;
+    String region;
     Date fechaNacimiento;
     String  Diagnostico;
+    String correo;
+   
     
     public  Connection con ;
     public  ResultSet resultado;
     
     
     public Modelo_Paciente( String p_nombre, String s_nombre ,String apellido_p, String apellido_m,
-                            String _rut, int _telefono, String _direccion, Date _fechaNacimiento,
+                            String _rut, int _telefono, Date _fechaNacimiento,
                             String  _Diagnostico ){
     
         this.Pnombre = p_nombre;
@@ -42,19 +50,13 @@ public class Modelo_Paciente {
         this.apellidoM = apellido_m;
         this.rut = _rut;
         this.telefono = _telefono;
-        this.direccion = _direccion;
         this.fechaNacimiento = _fechaNacimiento;
         this.Diagnostico = _Diagnostico;
 
 }
 
-
-  
     
-    public void paciente(String _rut, String p_nombre, String s_nombre ,String apellido_p, String apellido_m,
-                         String _fechaNacimiento, int _telefono, String _calle, int _num, int _dep, int _torre,
-                         String _comuna, String _ciudad, String _region, String _correo,
-                         String  _Diagnostico){
+    public void paciente(){
 
         Statement sentencia;
           int id=4;
@@ -62,16 +64,16 @@ public class Modelo_Paciente {
 
           con = ConexionDB.GetConnection();
           sentencia =con.createStatement();
-          sentencia.executeUpdate("INSERT INTO Direccion VALUES ('"+id+"',"+"'"+_calle+"',"+"'"+_num+"',"+
-                                  "'"+_dep+"',"+"'"+_torre+"',"+"'"+_comuna+"',"+"'"+_ciudad+"',"+"'"+_region+"')");
+          sentencia.executeUpdate("INSERT INTO Direccion VALUES ('"+id+"',"+"'"+calle+"',"+"'"+numero+"',"+
+                                  "'"+depto+"',"+"'"+torre+"',"+"'"+comuna+"',"+"'"+ciudad+"',"+"'"+region+"')");
           
-          sentencia.executeUpdate("INSERT INTO Paciente VALUES('"+_rut+"',"+"'"+p_nombre+"',"+"'"+s_nombre+"',"+
-                               "'"+apellido_p+"',"+"'"+apellido_m+"',"+"'"+_rut+"',"+"'"+_fechaNacimiento+"',"+
-                               "'"+_telefono+"',"+"'"+id+"',"+"'"+_correo+"',"+"'"+_Diagnostico+"')");
+          sentencia.executeUpdate("INSERT INTO Paciente VALUES('"+rut+"',"+"'"+Pnombre+"',"+"'"+Snombre+"',"+
+                               "'"+apellidoP+"',"+"'"+apellidoM+"',"+"'"+fechaNacimiento+"',"+
+                               "'"+telefono+"',"+"'"+id+"',"+"'"+correo+"',"+"'"+Diagnostico+"')");
 
           
 
-           JOptionPane.showMessageDialog(null,"El Paciente  " + p_nombre+ " "+ apellido_p+"   ha sido Ingresado Exitosamente ");                 
+           JOptionPane.showMessageDialog(null,"El Paciente  " + Pnombre+ " "+ apellidoP+"   ha sido Ingresado Exitosamente ");                 
 
         }
         catch(SQLException e){JOptionPane.showMessageDialog(null,"Error al ingresar los datos");}

@@ -20,6 +20,8 @@ public class Vista_AgregarP extends javax.swing.JFrame {
     public Vista_AgregarP() {
         initComponents();
     }
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.

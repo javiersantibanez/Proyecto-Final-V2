@@ -5,6 +5,7 @@
  */
 package Capa_Vista;
 
+import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,6 +19,9 @@ public class Vista_Principal extends javax.swing.JFrame {
      */
     public Vista_Principal() {
         initComponents();
+    }
+    public void botonIngresarPaciente(ActionListener escuchar){         
+        jButton6.addActionListener(escuchar);
     }
 
     /**
@@ -540,9 +544,7 @@ public class Vista_Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        Vista_AgregarM a = new Vista_AgregarM();
-        a.setVisible(true);
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
@@ -554,69 +556,44 @@ public class Vista_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
-        Vista_EditarM a = new Vista_EditarM();
-        a.setVisible(true);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        
-        Vista_EliminarM a = new Vista_EliminarM();
-        a.setVisible(true);
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-        Vista_AgregarP a = new Vista_AgregarP();
-        a.setVisible(true);
+        // TODO add your handling code her
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:ion
-        
-        JOptionPane.showMessageDialog(rootPane, "Registrado Correctamente");
+
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        Vista_EditarP a = new Vista_EditarP();
-        a.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-        
-        Vista_EliminarP a = new Vista_EliminarP();
-        a.setVisible(true);
+
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-        
-        Vista_AgregarDU a = new Vista_AgregarDU();
-        a.setVisible(true);
+
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-        
-        Vista_EditarDU a = new Vista_EditarDU();
-        a.setVisible(true);
+
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-        Vista_EliminarDU a = new Vista_EliminarDU();
-        a.setVisible(true);
+
         
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:ç
-        Vista_Inventario a = new Vista_Inventario();
-        a.setVisible(true);
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     /**

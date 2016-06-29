@@ -18,6 +18,7 @@ import javax.swing.JOptionPane;
  */
 public class Modelo_Paciente {
     
+<<<<<<< HEAD
     String Pnombre;
     String Snombre;
     String apellidoP;
@@ -34,12 +35,15 @@ public class Modelo_Paciente {
     Date fechaNacimiento;
     String  Diagnostico;
     String correo;
+=======
+>>>>>>> refs/remotes/origin/Franco
    
     
     public  Connection con ;
     public  ResultSet resultado;
     
     
+<<<<<<< HEAD
     public Modelo_Paciente( String p_nombre, String s_nombre ,String apellido_p, String apellido_m,
                             String _rut, int _telefono, Date _fechaNacimiento,
                             String  _Diagnostico ){
@@ -57,9 +61,23 @@ public class Modelo_Paciente {
 
     
     public void paciente(){
+=======
+    public Modelo_Paciente( ){
+    
+      
+}
+
+    
+    public void paciente(String calle, int numero, int depto, 
+            int torre, String comuna, String ciudad, 
+            String region, int rut, String Pnombre, 
+            String Snombre, String apellidoP, String apellidoM, 
+            String fechaNacimiento, int telefono, String correo, 
+            String Diagnostico){
+>>>>>>> refs/remotes/origin/Franco
 
         Statement sentencia;
-          int id=4;
+          int id=2;
           try{
 
           con = ConexionDB.GetConnection();
@@ -80,24 +98,6 @@ public class Modelo_Paciente {
         
   }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
-
-
 
 

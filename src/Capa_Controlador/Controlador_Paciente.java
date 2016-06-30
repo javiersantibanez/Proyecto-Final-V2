@@ -15,14 +15,17 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author Javier Santibañez
+ * Esta es la clase controladora de Paciente, contiene las transiciones de los botones de las vistas
+ * Esta clase es parte de la capa controlador 
+ * @author Javier Santibáñez,Franco Soto and José Valdivia
+ * @version version 1.0
  */
+
 public class Controlador_Paciente {
     
     private Vista_AgregarP vAddPac;
     private Vista_EditarP vEditPac;
-    private Vista_EliminarP vEliPac;
+    private Vista_EliminarP vDelPac;
     private Vista_Principal vPrin;
     private Modelo_Paciente mPac;
     
@@ -32,26 +35,35 @@ public class Controlador_Paciente {
         this.vPrin = vPrin;
         this.mPac = mPac;
         this.vEditPac = vEditPac;
-        this.vEliPac = vEliPac;
+        this.vDelPac = vEliPac;
         this.vAddPac.botonAtras(new Atras());
         this.vEditPac.botonAtras(new Atras());
+        this.vDelPac.botonAtras(new Atras());
         this.vAddPac.botonAceptar(new Aceptar());
         this.vEditPac.botonConsultar(new Consulta());
         this.vEditPac.botonActualizar(new Actualizar());
     }
     
-    //boton atras para todos
-    
+
+    /**
+     * Clase Abstracta que captura el boton Atras de las vistas Vista_AgregarP, Vista_EditarP y Vista_EliminarP
+    */
     class Atras implements ActionListener{
         @Override
         /**
          * Este método vuelve hacia la vista principal del programa
          */
+<<<<<<< HEAD
         public void actionPerformed(ActionEvent a) {
         
               
+=======
+        public void actionPerformed(ActionEvent a) {              
+>>>>>>> origin/Javier
                try{
                    vAddPac.setVisible(false);
+                   vEditPac.setVisible(false);
+                   vDelPac.setVisible(false);
                    vPrin.setVisible(true);
                   
                }catch(NumberFormatException ex){
@@ -60,7 +72,9 @@ public class Controlador_Paciente {
             }
     }
     
-    //Boton aceptar para ingresar
+    /**
+     * Clase Abstracta que captura el boton Aceptar de la vista Vista_IngresarP
+    */
     class Aceptar implements ActionListener{
         @Override
         /**

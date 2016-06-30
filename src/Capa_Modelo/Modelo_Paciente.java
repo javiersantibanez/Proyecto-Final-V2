@@ -165,6 +165,14 @@ public class Modelo_Paciente {
          
             
     }
+<<<<<<< HEAD
+=======
+
+    
+    
+    
+}
+>>>>>>> origin/Javier
 
     
     

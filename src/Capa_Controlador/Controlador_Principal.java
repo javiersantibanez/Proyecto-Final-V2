@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * Clase
  * @author Javier Santibañez
  */
 public class Controlador_Principal {

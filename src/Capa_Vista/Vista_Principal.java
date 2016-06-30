@@ -23,7 +23,15 @@ public class Vista_Principal extends javax.swing.JFrame {
     public void botonIngresarPaciente(ActionListener escuchar){         
         jButton6.addActionListener(escuchar);
     }
-
+    
+    public void botonEditarPaciente(ActionListener escuchar){
+        
+        jButton5.addActionListener(escuchar);
+    }
+    public void botonEliminarPaciente(ActionListener escuchar){
+        
+        jButton7.addActionListener(escuchar);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

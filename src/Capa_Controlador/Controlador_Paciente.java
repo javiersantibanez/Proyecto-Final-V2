@@ -36,6 +36,8 @@ public class Controlador_Paciente {
         this.vAddPac.botonAtras(new Atras());
         this.vEditPac.botonAtras(new Atras());
         this.vAddPac.botonAceptar(new Aceptar());
+        this.vEditPac.botonConsultar(new Consulta());
+        this.vEditPac.botonActualizar(new Actualizar());
     }
     
     //boton atras para todos
@@ -46,7 +48,7 @@ public class Controlador_Paciente {
          * Este método vuelve hacia la vista principal del programa
          */
         public void actionPerformed(ActionEvent a) {
-            System.out.println("atrasssaasasas");
+        
               
                try{
                    vAddPac.setVisible(false);
@@ -75,7 +77,7 @@ public class Controlador_Paciente {
                    vEditPac.limpiarTextField();
                    
                }catch(NumberFormatException ex){
-                   JOptionPane.showMessageDialog(vPrin, "Error al volver a la pagina principal");
+                   JOptionPane.showMessageDialog(vPrin, "Error al ingresar datos del paciente");
                }
             }
     }
@@ -90,39 +92,48 @@ public class Controlador_Paciente {
               
                try{
                    //enviar a modelo
-                   mPac.Ingresarpaciente(vEditPac.getCalle(),vEditPac.getNumero(),vEditPac.getDepto(),vEditPac.getTorre(),vEditPac.getComuna(),
+                   mPac.ActualizarPaciente(vEditPac.getCalle(),vEditPac.getNumero(),vEditPac.getDepto(),vEditPac.getTorre(),vEditPac.getComuna(),
                    vEditPac.getCiudad(),vEditPac.getRegion(),vEditPac.getRut(),vEditPac.getPrimerNombre(),vEditPac.getSegundoNombre(),vEditPac.getApellidoPaterno(),
                    vEditPac.getApellidoMaterno(),vEditPac.getFNacimiento(),vEditPac.getTelefono(),vEditPac.getCorreoElectronico(),vEditPac.getDiagnostico());
                    //limpiar texto
                    vEditPac.limpiarTextField();
                    
                }catch(NumberFormatException ex){
-                   JOptionPane.showMessageDialog(vPrin, "Error al volver a la pagina principal");
+                   JOptionPane.showMessageDialog(vPrin, "Error al actualizar los datos del paciente");
                }
             }
     }
     
     //Boton consulta para editar
     class Consulta implements ActionListener{
-        @Override
+        
         /**
          * Este método ...
          */
+        public void setDatosPaciente (String [] aux){
+            
+            vEditPac.setDatos(aux[0],aux[1],aux[2],aux[3],aux[4],aux[5],aux[7],aux[8],
+                              aux[9],aux[10],aux[11],aux[12],aux[13],aux[14],aux[15]);
+            
+            
+        }
+        
         public void actionPerformed(ActionEvent a) {
-              
-               try{
-                   vEditPac.getRut();
-                   
-                   
-                   
-                   
-                   //funcion que habilita el contenido a editar:
-                   vEditPac.habilitarContenido();
-                   
-               }catch(NumberFormatException ex){
-                   JOptionPane.showMessageDialog(vPrin, "Error al volver a la pagina principal");
-               }
+            String [] datos = new String[9]; 
+            try{
+               //realiza la consulta a db y set datos en vista
+               setDatosPaciente (mPac.ConsultaPaciente(vEditPac.getRut()));
+
+
+
+
+               //funcion que habilita el contenido a editar:
+               vEditPac.habilitarContenido();
             }
+            catch(NumberFormatException ex){
+               JOptionPane.showMessageDialog(vPrin, "Error al realizar la consulta");
+            }
+        }
     }
     
 }

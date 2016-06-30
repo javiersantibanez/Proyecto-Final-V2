@@ -90,8 +90,7 @@ public class Vista_EditarP extends javax.swing.JFrame {
     }
     
     
-     public void botonAtras(ActionListener escuchar){
-         
+    public void botonAtras(ActionListener escuchar){         
         jButton3.addActionListener(escuchar);
     }
     public void botonActualizar(ActionListener escuchar){
@@ -126,6 +125,29 @@ public class Vista_EditarP extends javax.swing.JFrame {
         jTextField1.setText("");
         
     }
+    
+    public void setDatos(String aux,String aux2,String aux3,String aux4,
+                         String aux5,String aux6,String aux7,String aux8,
+                         String aux9,String aux10,String aux11,String aux12,
+                         String aux13,String aux14,String aux15){
+        jTextField2.setText(aux);
+        jTextField3.setText(aux2);
+        jTextField4.setText(aux3);
+        jTextField5.setText(aux4);
+        jTextField6.setText(aux5);
+        jTextField8.setText(aux6);
+        jTextField16.setText(aux7);
+        jTextField17.setText(aux8);
+        jTextField7.setText(aux9);
+        jTextField11.setText(aux10);
+        jTextField9.setText(aux11);
+        jTextField12.setText(aux12);
+        jTextField13.setText(aux13);
+        jTextField14.setText(aux14);
+        jTextField15.setText(aux15);
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -428,8 +450,7 @@ public class Vista_EditarP extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        
+        // TODO add your handling code here:        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

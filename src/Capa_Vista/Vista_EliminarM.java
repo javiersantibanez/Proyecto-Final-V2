@@ -5,6 +5,8 @@
  */
 package Capa_Vista;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Javier Santibañez
@@ -17,7 +19,9 @@ public class Vista_EliminarM extends javax.swing.JFrame {
     public Vista_EliminarM() {
         initComponents();
     }
-
+    public void botonAtras(ActionListener escuchar){         
+        jButton2.addActionListener(escuchar);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -102,8 +106,7 @@ public class Vista_EliminarM extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
